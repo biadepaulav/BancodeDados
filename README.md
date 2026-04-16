@@ -14,7 +14,6 @@ https://app.brmodeloweb.com/#!/publicview/69e0054ee7f0a96088a478e8
 
 ## veterinario
 ### conceitual:
-
 https://app.brmodeloweb.com/#!/publicview/69e0079ae7f0a96088a479c3
 ### lógico:
 https://app.brmodeloweb.com/#!/publicview/69e007b3e7f0a96088a479d0
