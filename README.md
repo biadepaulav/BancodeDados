@@ -1,9 +1,9 @@
 # BancodeDados
 
 ## imobiliaria
-conceitual:
+### conceitual:
 https://app.brmodeloweb.com/#!/publicview/69b297a125dde5c84617f618
-*lógico:*
+lógico:
 https://app.brmodeloweb.com/#!/publicview/69e004f5e7f0a96088a478ad
 
 ## escola
