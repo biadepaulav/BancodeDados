@@ -16,12 +16,12 @@ https://app.brmodeloweb.com/#!/publicview/69e0054ee7f0a96088a478e8
 ### conceitual:
 https://app.brmodeloweb.com/#!/publicview/69e0079ae7f0a96088a479c3
 ### lógico:
-https://app.brmodeloweb.com/#!/publicview/69e007b3e7f0a96088a479d0
+https://app.brmodeloweb.com/#!/publicview/69e0fe10e7f0a96088a4d996
  
 ## StremTec
 ### conceitual: 
 https://app.brmodeloweb.com/#!/publicview/69e00676e7f0a96088a4796a
 ### lógico: 
-https://app.brmodeloweb.com/#!/publicview/69e0068ce7f0a96088a4797b
+https://app.brmodeloweb.com/#!/publicview/69e0fd32e7f0a96088a4d91e
 
 
