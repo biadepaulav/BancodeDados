@@ -1,0 +1,54 @@
+( 
+ idtatuador INT PRIMARY KEY,  
+ idsenioridade INT,  
+ NomeA INT,  
+ Telefone INT,  
+ cpf INT,  
+ DataC INT,  
+ telefone INT,  
+); 
+
+CREATE TABLE Estilo Tatuagem 
+( 
+ idEstilo INT PRIMARY KEY,  
+ Descricao INT,  
+ Nome INT,  
+); 
+
+CREATE TABLE Cliente 
+( 
+ idcliente INT PRIMARY KEY,  
+ Telefone INT,  
+ Nome INT,  
+ cpf INT,  
+ DataN INT,  
+); 
+
+CREATE TABLE senioridade 
+( 
+ idsenioridade INT PRIMARY KEY,  
+ nome INT,  
+); 
+
+CREATE TABLE agendamento 
+( 
+ idCliente INT,  
+ idTatuador INT,  
+ Data INT,  
+ Horario INT,  
+ Descricao INT,  
+ Valor INT,  
+ Status INT,  
+); 
+
+CREATE TABLE Domina 
+( 
+ idtatuador INT PRIMARY KEY,  
+ idEstilo INT PRIMARY KEY,  
+); 
+
+ALTER TABLE Tatuador ADD FOREIGN KEY(idsenioridade) REFERENCES senioridade (idsenioridade)
+ALTER TABLE agendamento ADD FOREIGN KEY(idCliente) REFERENCES Cliente (idCliente)
+ALTER TABLE agendamento ADD FOREIGN KEY(idTatuador) REFERENCES Tatuador (idTatuador)
+ALTER TABLE Domina ADD FOREIGN KEY(idtatuador) REFERENCES Tatuador (idtatuador)
+ALTER TABLE Domina ADD FOREIGN KEY(idEstilo) REFERENCES Estilo Tatuagem (idEstilo)
