@@ -6,20 +6,20 @@ CREATE TABLE senioridade
 
 CREATE TABLE tatuador
 ( 
- idtatuador 	 INT 	AUTO_INCREMENT PRIMARY KEY,  
- codsenioridade  INT,  
- nometatuador 	 VARCHAR(),  
- telefone 	 VARCHAR(),  
- cpf 		 CHAR,  
- datacontratacao DATE,  
- email	 	 VARCHAR(150),  
+ idtatuador 	 INT 		AUTO_INCREMENT PRIMARY KEY,  
+ codsenioridade  INT		NOT NULL,  
+ nometatuador 	 VARCHAR()	NOT NULL,  
+ telefone 	 VARCHAR()	NULL,  
+ cpf 		 CHAR		NOT NULL UNIQUE,  
+ datacontratacao DATE		NOT NULL,  	
+ email	 	 VARCHAR(150)	NULL UNIQUE,  
+ FOREIGN KEY (codsenioridade) REFERENCES senioridade (codsenioridade)
 ); 
 
 CREATE TABLE Estilo Tatuagem 
 ( 
- idEstilo INT PRIMARY KEY,  
- Descricao INT,  
- Nome INT,  
+ idEstilo 	INT 	AUTO_INCREMENT PRIMARY KEY,   
+ Nome 		VACHAR	NOT NULL UNIQUE,  
 ); 
 
 CREATE TABLE Cliente 
