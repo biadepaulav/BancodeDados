@@ -18,36 +18,36 @@ CREATE TABLE tatuador
 
 CREATE TABLE Estilo Tatuagem 
 ( 
- idEstilo 	INT 	AUTO_INCREMENT PRIMARY KEY,   
- Nome 		VACHAR	NOT NULL UNIQUE,  
+ idEstilo 	INT 		AUTO_INCREMENT PRIMARY KEY,   
+ Nome 		VACHAR		NOT NULL UNIQUE,  
 ); 
 
 CREATE TABLE Cliente 
 ( 
- idcliente INT PRIMARY KEY,  
- Telefone INT,  
- Nome INT,  
- cpf INT,  
- DataN INT,  
+ idcliente 	INT 		AUTO_INCREMENT PRIMARY KEY,  
+ Telefone 	INT		NULL,  
+ Nome 		VARCHAR(255)	NOT NULL UNIQUE,  
+ cpf 		CHAR		NOT NULL,  
+ DataN 		INT		NOT NULL,  
 ); 
 
 
 
 CREATE TABLE agendamento 
 ( 
- idCliente INT,  
- idTatuador INT,  
- Data INT,  
- Horario INT,  
- Descricao INT,  
- Valor INT,  
- Status INT,  
+ idCliente 	INT		AUTO_INCREMENT PRIMARY KEY,  
+ idTatuador 	INT		AUTO_INCREMENT PRIMARY KEY,  
+ Data 		DATE		NOT NULL,  
+ Horario 	DATE		NOT NULL,  
+ Descricao 	VARCHAR(255)	NULL,  
+ Valor 		FLOAT		NOT NULL,  
+ Status 	VARCHAR(255)	NOT NULL,  
 ); 
 
 CREATE TABLE Domina 
 ( 
- idtatuador INT PRIMARY KEY,  
- idEstilo INT PRIMARY KEY,  
+ idtatuador 	INT 	AUTO_INCREMENT PRIMARY KEY,  
+ idEstilo 	INT 	AUTO_INCREMENT PRIMARY KEY,  
 ); 
 
 ALTER TABLE Tatuador ADD FOREIGN KEY(idsenioridade) REFERENCES senioridade (idsenioridade)
