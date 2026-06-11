@@ -174,3 +174,127 @@ Query OK, 11 rows affected (0.016 sec)
 Records: 11  Duplicates: 0  Warnings: 0
 
 MariaDB [loja]>
+
+
+Microsoft Windows [versão 10.0.19045.5011]
+(c) Microsoft Corporation. Todos os direitos reservados.
+
+C:\Users\Aluno>cd C:\xampp\mysql\bin
+
+C:\xampp\mysql\bin>mysql -u root
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 48
+Server version: 10.4.27-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> use loja
+Database changed
+MariaDB [loja]> show tables
+    -> ;
++----------------+
+| Tables_in_loja |
++----------------+
+| categorias     |
+| produtos       |
++----------------+
+2 rows in set (0.001 sec)
+
+MariaDB [loja]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| loja               |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
++--------------------+
+6 rows in set (0.001 sec)
+
+MariaDB [loja]> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [loja]> show tables;
++----------------+
+| Tables_in_loja |
++----------------+
+| categorias     |
+| produtos       |
++----------------+
+2 rows in set (0.001 sec)
+
+MariaDB [loja]> select * from categorias;
++--------------+-------------+
+| id_categoria | categoria   |
++--------------+-------------+
+|            1 | Eletrônicos |
+|            2 | Roupas      |
+|            3 | Limpeza     |
+|            4 | Frios       |
+|            5 | Hortifruit  |
+|            6 | Açougue     |
+|            7 | Padaria     |
+|            8 | Doces       |
+|            9 | Temperos    |
+|           10 | Plantas     |
+|           11 | Embalagens  |
++--------------+-------------+
+11 rows in set (0.001 sec)
+
+MariaDB [loja]> insert into produtos (nome, preco, quantidade, marca, id_categoria) values
+    -> ("celular", 1200.50, 20, "Sansung", 1);
+ERROR 1054 (42S22): Unknown column 'quantidade' in 'field list'
+MariaDB [loja]> describe produto
+    -> ;
+ERROR 1146 (42S02): Table 'loja.produto' doesn't exist
+MariaDB [loja]> show tables;
++----------------+
+| Tables_in_loja |
++----------------+
+| categorias     |
+| produtos       |
++----------------+
+2 rows in set (0.001 sec)
+
+MariaDB [loja]> describe produtos;
++--------------+---------------+------+-----+---------+----------------+
+| Field        | Type          | Null | Key | Default | Extra          |
++--------------+---------------+------+-----+---------+----------------+
+| id_produto   | int(11)       | NO   | PRI | NULL    | auto_increment |
+| nome         | varchar(255)  | NO   |     | NULL    |                |
+| preco        | decimal(10,2) | NO   |     | NULL    |                |
+| qntd         | int(11)       | NO   |     | NULL    |                |
+| marca        | varchar(255)  | NO   |     | NULL    |                |
+| observacoes  | varchar(255)  | YES  |     | NULL    |                |
+| id_categoria | int(11)       | YES  | MUL | NULL    |                |
+| datacadastro | date          | NO   |     | NULL    |                |
++--------------+---------------+------+-----+---------+----------------+
+8 rows in set (0.022 sec)
+
+MariaDB [loja]> insert into produtos (nome, preco, qntd, marca, id_categoria) values
+    -> ("celular", 1200.50, 20, "Sansung", 1);
+Query OK, 1 row affected, 1 warning (0.013 sec)
+
+MariaDB [loja]> insert into produtos (nome, preco, quantidade, marca, id_categoria) values
+    -> ("vestido rosa", 56.89, 20, "vestido", 1)
+    -> ("presunto", 6.50, 20, "Sadia", 4);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '("presunto", 6.50, 20, "Sadia", 4)' at line 3
+MariaDB [loja]> insert into produtos (nome, preco, quantidade, marca, id_categoria) values
+    -> ("presunto", 6.50, 20, "Sadia", 4);
+ERROR 1054 (42S22): Unknown column 'quantidade' in 'field list'
+MariaDB [loja]> insert into produtos (nome, preco, qntd, marca, id_categoria) values
+    -> ("presunto", 6.50, 20, "Sadia", 4);
+Query OK, 1 row affected, 1 warning (0.012 sec)
+
+MariaDB [loja]> insert into produtos (nome, preco, qntd, marca, id_categoria) values
+    -> ("maçã", 6.50, 20, "Turma da Mônica", 5)
+    -> ("carne", 46.50, 20, "Friboi", 6);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '("carne", 46.50, 20, "Friboi", 6)' at line 3
+MariaDB [loja]> insert into produtos (nome, preco, qntd, marca, id_categoria) values
+    -> ("maçã", 6.50, 20, "Turma da Mônica", 5),
+    -> ("carne", 46.50, 20, "Friboi", 6);
+Query OK, 2 rows affected, 1 warning (0.015 sec)
+Records: 2  Duplicates: 0  Warnings: 1
