@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Jun-2026 às 17:25
+-- Tempo de geração: 18-Jun-2026 às 17:27
 -- Versão do servidor: 10.4.27-MariaDB
 -- versão do PHP: 8.0.25
 
@@ -76,7 +76,9 @@ INSERT INTO `produtos` (`id_produto`, `nome`, `preco`, `qntd`, `marca`, `observa
 (1, 'celular', '1200.50', 20, 'Sansung', NULL, 1, '0000-00-00'),
 (2, 'presunto', '6.50', 20, 'Sadia', NULL, 4, '0000-00-00'),
 (3, 'maçã', '6.50', 20, 'Turma da Mônica', NULL, 5, '0000-00-00'),
-(4, 'carne', '46.50', 20, 'Friboi', NULL, 6, '0000-00-00');
+(4, 'carne', '46.50', 20, 'Friboi', NULL, 6, '0000-00-00'),
+(5, 'Notebook', '2500.50', 20, 'Sansung', NULL, 1, '0000-00-00'),
+(6, 'Frango', '19.90', 20, 'DaLoja', NULL, 6, '0000-00-00');
 
 --
 -- Índices para tabelas despejadas
@@ -109,7 +111,7 @@ ALTER TABLE `categorias`
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_produto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restrições para despejos de tabelas
