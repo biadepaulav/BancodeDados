@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 30/07/2026 às 17:27
+-- Tempo de geração: 06/08/2026 às 17:24
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -65,6 +65,16 @@ CREATE TABLE `atendimento` (
   `descricao` varchar(255) NOT NULL,
   `valor` decimal(7,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `atendimento`
+--
+
+INSERT INTO `atendimento` (`idate`, `idanimal`, `idvet`, `dataatendimento`, `horaatendimento`, `descricao`, `valor`) VALUES
+(1, 4, 2, '2026-08-03', '11:14:00', 'Não estava se alimentando, notamos que estava em período de hibernação.', 100.00),
+(2, 6, 1, '2026-08-05', '11:00:59', 'nada demais.', 300.00),
+(3, 5, 3, '2026-08-20', '09:27:33', 'Tutora relata latido \"ai ai\" em vez de \"au au\", investigação está sendo realizada.', 400.00),
+(4, 3, 1, '2026-08-02', '11:00:10', 'Vacina V10 aplicada.', 150.00);
 
 -- --------------------------------------------------------
 
@@ -161,7 +171,7 @@ ALTER TABLE `animais`
 -- AUTO_INCREMENT de tabela `atendimento`
 --
 ALTER TABLE `atendimento`
-  MODIFY `idate` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idate` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `cliente`
