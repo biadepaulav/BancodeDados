@@ -24,4 +24,11 @@ https://app.brmodeloweb.com/#!/publicview/69e00676e7f0a96088a4796a
 ### lógico: 
 https://app.brmodeloweb.com/#!/publicview/69e0fd32e7f0a96088a4d91e
 
+## lava rápido
+### conceitual
+### lógico
+
+## restaurante bar
+### conceitual
+### lógico
 
