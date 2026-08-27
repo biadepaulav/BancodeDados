@@ -34,5 +34,7 @@ https://docs.google.com/document/d/1-IwflP95vDPcpPnLt3JtD7-MrgVzq6D-w5MohdoJNXg/
 
 ## restaurante bar
 ### conceitual
+https://app.brmodeloweb.com/publicview/6a8f93c90f6d17517ba29ea8
 ### lógico
+https://app.brmodeloweb.com/publicview/6a8f948f0f6d17517ba29eff
 
